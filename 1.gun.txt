@@ -1,0 +1,82 @@
+Penetrasyon testleri temelleri
+------------------------------
+Zafiyet toplanmasi 
+Encoding = veri farkli bir bicimde ifade etmek
+Payload  = calistirdigim kod
+Exploit  = zafiyeti somurmek
+Yetki yukseltme
+Pragmantasyon = veriyi parcalayarak yollamak.
+pentest = saldirganla ayni sey yabilir.etik olrak.
+black-gray-white box testleri
+Pasif bilgi toplama - Aktif bilgi toplama - Tarama - Sizma islemeleri -Erisim aldik(backdoor-shell)-Yetki 
+yukseltme(islemtim sistemi tarafindadir)-gizlenme(farkli process)
+--------------------------------------------------------------------------------------------------------------
+Network Nedir
+---------------------------------------------------------------------------------------------------------------
+Bilgisayar aglari
+Osi referans modeli | sadece bir referans modeli olarak alinmistir
+her firma kendi protokelleri ile sektore dahil oldugu icin standarlistirmaya karar vermisler
+7 katmanli-----------------------------------------------------------------------------------------------------
+1.katman || fiziksel || wifi kartlari || ethernet kablolarÄfalan filan ||
+2.katman || Datalink || mac adresi    || 
+3.katman || network  || ip adresleri  || yonlendirme islemleri icin ip adreslerine gerek duyuldu || modem
+4.katman || Tasima   || kontrol       || tcp - udp gibi protokeller
+5.katman || secim    || oturum islem  ||
+6.katman || sifrleme || snal          ||
+7.katman || uygulama || internete girme icin kullandigimiz  yazilimlar || mail sistemleri smtp || 
+---------------------------------------------------------------------------------------------------------------
+Veri alindigi sadece kendisi ile ilgili olan veriyi alir bir Ãuste verir.En sonda karsiya veri ulasir.
+---------------------------------------------------------------------------------------------------------------
+TCP/ÄIP Temellleri
+---------------------------------------------------------------------------------------------------------------
+Arpanet = bilgisayarlarin kendi aralarinda konusabilecegi bir ag kurmak istedi(askeri-bilim-Ãuniversiteler)
+protokol suiti kendi basina bir protokel degil = tcp/ip en cok kullanilan 2 protokol.
+Osi cok katiydi(kurallari acisindan)
+------------------------------------------------------------------------------------------------------------------------|
+Tcp/ip katmalarÄ±                                      |Tcp/ip flag, bayraklar 						|
+-------------------------------------------------------| ---------------------------------------------------------------|
+Uygulama ------\                                      <| uclu el sikisma						|
+Aktarim  ------ \  Tcp/ip                             <| syn 	 = ilk adimda kullanilir baglanti kurcam demektir.      |
+internet ------ /  Aglarin agi                        <| syn/ack = sen baglanti kurabilirsin                            |
+Fiziksel ----- /                                      <| ack 	 = veri yllanir veya bos doner                          |
+-------------------------------------------------------| ack paketi donmezse bir daha yollar. Veri transferi saglanir.  |
+                                                       |----------------------------------------------------------------|     
+						       |  WireShark ile uygulamali olarak gosterildi                    |							
+rst,fin,push tcp/ip bayraklari arastir.                |                                                                |
+Closed,Filtred,open gibi durumlari± incele             |                                                                |
+------------------------------------------------------------------------------------------------------------------------|
+Udp = hizli olmasi gerekilen yerlerde kullanilir.gonderir cevap beklemez.                                               |
+------------------------------------------------------------------------------------------------------------------------|
+IP Nedir. |
+-----------
+Internet protokel, aglar arasi iletisim icin Ãonemlidir.
+127 den sonra rakamlarin degismesi bir sey etmez halen localhost.
+/24 ilk 24 biti sabit demek digerleri degisebilir demek 32 ile 0 arasi butun degerleri alir.
+2^32-1 = rakamlarin ip adresine donusuunebak, 4 baytlik isaretsiz sayi = ip adresi
+------------------------------------------------------------------------------------------------------------------------
+Ip Siniflandirma|
+-----------------
+Port Nedir.| Servisi direkt disari acmak icin,hepsini ayirmak icin port vermisler, birden fazla procsesi calstirmak icin.
+Dns Nedir. | Name server.
+-------------------------------------------------------------------------------------------------------------------------
+| Bilgi Toplama |  Pasif-Aktif Bilgi toplama.|
+----------------------------------------------
+hedefle iletisime gecilmedigi zaman = pasif
+whois bilgileri = whoisdb'lerine kayit oluyor.
+whois bilgileri ilk asamada Ãonemlidir.
+ip adresinden dns bulma reverse dns
+--------------------------------------------------------------------------------------------------------------------------
+google arama metotlari
+googleHackingDatabase
+--------------------------------------------------------------------------------------------------------------------------
+archive.org  : gecmisdeki durumdan snapsholar ile haberdar olmamizi saglar.
+theHarvester : site hakkinda ise yarar bilgiler saglar.
+shodan.io    : shodan trcik aramlar konusunu arastir.
+--------------------------------------------------------------------------------------------------------------------------
+Aktif bilgi toplama.
+--------------------------------------------------------------------------------------------------------------------------
+nmap | 
+------
+arp nedir. =  Åsu ipli bilgisayari ariyorum.mac adresi ne istegine mac adresi donmek kullanilir.
+-P pingi ifade eder.
+

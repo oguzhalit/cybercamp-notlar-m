@@ -1,0 +1,63 @@
+Web uygulama guvenligi
+-----------------------------------------------------------------------------------------------------------------------------
+Oturum turleri netscape[cookie]                                                                                         
+cookie=veri ile dijital veri olusturuluyor. size veriyor. ilk defa istek yapiyorsunuz bir cookie veriyor.cookieleri headra
+ekleyiip yolluyor domainle eslediginizde o web uygulamsi gelen her istedigi taniyaibliyor.
+php cookieye ait domain olmaak zorunda cookie gecerli olmali suresi[tarihi] dolabilir.
+cookie eslestirme ile o kisi gibi giris[o kullanici giris yaptikdan sonraki cookiesi onemli] yapilabilir.
+cookie sql dosyasi veriyor.(firefox);
+Session = giris olursa bir id veriyor.bize bir dosya veriyor(dosya numarasi ile )sunucu tarafinda tutulur.
+php session start.
+----------------------------------------------------------------------------------------------------------------------------
+XSS - Cross site scripting | javascript | zafiyeti ile yapilabilcekler.| qr kod'a payload atma.| bwapp cozumleri
+----------------------------------------------------------------------------------------------------------------------------
+Reflecced = 
+Stored    = 
+Dom Based =
+------------
+Blind XSS   ||xss'den nasil korunuruz .= girdi kontrollu ile basit bir sekilde engellenebilir.|blacklist kullanilabilir.|
+-----------------------------------------------------------------------------------------------------------------------------
+SQL injection |
+-----------------------------------------------------------------------------------------------------------------------------
+disardan gelen bilgi ile veritabnindan bilgi izinsiz veri cekme.
+databasede sorgulanan yerlede sql injection aranir.
+tirnak atarak title degerinin degiskeni ile sorgu bozuluyor.silinen tirnak geri ekleniyor.
+sql komutlari ve dil isleyisi hakkinda pratik yaptik.
+mysql'de isletim sistemine rat atma = output fonksiyonu ile
+msfvenom Äile reverse shell alma-bind ile farkina iyi arstir.
+-----------------------------------------------------------------------------------------------------------------------------
+sql'den isletim sistemine sicrama
+--------------------------------------------------------------
+calisma kaynaklari
+natas
+bwapp
+vwa(vuln web app)
+bwapp
+vulnhub
+hacthebox
+---------------------------------------------------------------------------------------------------
+sql turleri[arstir]
+boolean-based-bind ]-[ dogru yanlis ile yazanlari bulma.																						
+burp suite ile dogru yanlis kismi otomatize ediyoruz a-z A-Z.
+dogru buldugunda respons degisir ordan anlariz.sayisal degerden.[positiondan degiskeni seciyoruz.]
+bazen responso dogru olsada farkkli donmeyebilrr o zamn uzunluguna bakmak grekir.
+timebased = 
+----------------------------------------------------------------------------------------------------
+rfi-lfi
+----------------------------------------------------------------------------------------------------
+/etc/passwd dosyasini her kullaniici okur bu sekilde kod okuabilecemizi Ãogreniyorzu
+sistemde path'i belli olan dosyalar okunmaya calisip oraya payload okutturulabilir.
+payload'i atarken burp suit ile bir headar yollayip yazabilir.[donusumde sikinti cikarip kodumuz calismayailir.]
+Advanced lfi=php ve javascipt web uyuglama guvenligi icin onemli.
+bazi durumlarda - post metot u ile kod yollarinir -get istegini post'a cevirmemiz lazim.body kismina gidier deger.
+stream wrapper
+---------------------------------------------------------------------------------------------------------------------*
+csrf;bir link atilir o linke girdiginde zararli bir siteye yonlendiriyor. adam o siteye girdiginde farkinda olmadan oy 
+kullandirdiryor.
+csrf token; 
+*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
+os,rce,injection   --------\
+ssrf------------------------\
+izor------------------------/ diger web zafiyetleri arastir.
+template log---------------/
+--------------------------

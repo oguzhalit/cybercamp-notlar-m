@@ -1,0 +1,100 @@
+-------------------------------------------------------------------------------------------------------------------------------
+powershell encoder [Ãonemli]
+smb system olarak calisir.
+migrate 2292 process sicramasi
+kivi.
+hashdump'i dc calistirirsak butun kulllancilar alr.local 'e eklenir.net-user /domain demezsek local e eklener
+net gruop = domainadmins barrefli ekler.
+Sql bilgi tplama
+-----------------------------------------------------------------------------------------------------------------------------
+nmap = bilgi toplama asmasinda aktif kulllanilan bir aractir detayli arastir.
+msfconsole -q = hizli acilmasi icin.
+
+*|privia hub nat'a gelince.|ip adresi alicak|*Å
+version tespiti = banner greping, isletim sistemi uzerinde ssql sistemleri,e-posta sunucusu ve sqql sitemelrde public 
+exploit yok. kanalize olmak - version bilgileri icin Ãonemlidir.bagimliliklar birbirinden farkli.[es zamanli = processler 
+altinda calisan kcuk isler.]tek basina bir proses degildir altinda binlerce proses acabilir.
+surum farkliliklari zararli kod isleyisini degistirir. o yuzden version bilgileri Ãonemlidir.
+prosesin start olma durumuna gore nereye gidecegine karar verir. |nereye gidceigne ben karar veririm(isletim sisteminin 
+o anki yuk durumuna gore)|.
+------------------------------------------------------------------------------------------------------------------------------
+sadece 1 porta ping atan tool indir.
+multi task-paralel programing farki.
+------------------------------------------------------------------------------------------------------------------------------
+pupying = sadece o porta gidiyoor | ping nasil calisiyor | Ä±isnp=en temel iletisim protokulu.  |  pingi kapatiyor  syn 
+paketli bir pkaet gondererk o port ayakdami degil mi kontrol ediyo.|
+------------------------------------------------------------------------------------------------------------------------------
+* Evde dene *|192.168.228.0-255.255.255.0| 
+sql browser ilede bilgi toplanabilir.    |
+Browser more network'de ki sql portu acik olanlari getiriyor.|enable olmasi lazim.
+------------------------------------------------------------------------------------------------------------------------------
+sql'e sizma icin 2 islem vardir,1,brute force 2 mitm.|bir yazilim dilinee sahip olmak gerekiyor
+------------------------------------------------------------------------------------------------------------------------------
+auxlitary/scanner/ = tarama sonu login ise = brute force atagidir.
+show options ile ayarlamamiz gereken islemleri goruyoruz.
+nmap script taramasi ile aktif olan.1433mssql 1521oracle 5432postsql 
+wireshark -Ãogren - uclu el sikisma gibi bir dogrulanma  soz konusu.wireshark paket yakala degistir yolla. tds=login sql 
+cumleririni anlamaya yarior.2 kimlik dogrulama yontimi.default gelen windows authenticattion
+set RHOST ip_adresi.
+set SetUsername sa.
+set pass_file word_list konum.
+set stop_succses 
+exploit -j.
+------------------------------------------------------------------------------------------------------------------------------
+isim.kuruldugu_yil = passsword generator.
+------------------------------------------------------------------------------------------------------------------------------*
+nmap ile de brute force attack yapilabilir.
+kendi aracini yaz.
+c# ile brute force atttack yapan program yaz.
+sql server managemnet login olma. veriabanina baglanip bilgi Ãcekme.
+------------------------------------------------------------------------------------------------------------------------------*
+veri tabani yonetim sistemi = hedef senaryolari planla.sql Ãuzerinden isletim sistemine gecis.
+stored prosedur=sqlde hazirlanmis bir metot gibi dusunulebilir.
+-------------------------------------------------------------------------------------------------------------------------------
+xp_cmdshell =2008 ve sonrasinda kapali gelir.isletim sistemine komut gondermeye yarar.
+sp_OACreate =-\ otosmasyon kutuphanlerini kullanarak sorgu gonturmeye yarar.
+sp_OAMethod =-/ ip config gibi cikti istenebilir.
+CLR payload =  Esas konu - shell'in kapali oldugu gelir - 0 dan  1 e cekerek aktifligi saglanir.nt service/mysqlserver 
+kalitim aliyor.yonetsel komut calistiramaz.
+clr varsayilanda kapali.clr nesne erisimi .native dll.dll olstrma ve arkada tarafa implement etmeye yarar.
+-------------------------------------------------------------------------------------------------------------------------------
+sistemin araclari,Assembiles = dll .exe.;kendi payloadmizi yazmamizi gerecek []
+safe
+unsafe
+-------------------------------------------------------------------------------------------------------------------------------
+bitstreem(array) = hex 
+mz 4d ve 5a = text olarak mz = Ãcalistiralabilir bir dosya demek.
+artik dll belllekde caliscak,ram'e yerlesiyor.]md5 icinde sakli kalir.
+yogun tablolarin duzenlenmesini backup alinmasini duzenlemek icin Ãcikti.
+store prosedur.sp
+-------------------------------------------------------------------------------------------------------------------------------
+exitseciccions false kapanmaz surekli acik kalir.sezgisel trama metotu.;powershell cmd uzerinden indrime islemi.
+veriyi saklama icin byte turunde imajda tutabilliriz.native objeyi tabloya yazdirabialir.z.
+bultadmin=sema kullanarak bir yere cikartiyor.
+-------------------------------------------------------------------------------------------------------------------------------
+tabloya binary kodda exe mizi yollucaz.| tablodan disariya atilmasi lazim 8011[buyuk verilerin disari atilmasini saglayan ]
+imaj disandaki veriyi degislik yapmadan disari atiyor.yoksa basina 2 bytelik veri ekler.
+hakveyetki=
+bitstreamm olarak okuyoruz bult ediyoruz dll calistiriyoruz.meterpreterden payloadmizi calistiriyoruz.
+load kivi.32bit 64bit -- migrate | crentdial all ]clr payload.
+rookit arastir.
+--------------------------------------------------------------------------------------------------------------------------------
+routing=yook yonlnedirme
+--------------------------------------------------------------------------------------------------------------------------------
+sql'den domaine ziplama:
+dmz-lan[baglantilari arastir.]
+route=autoroute = 58 networkune gidecegiz birden fazla makine olabilir.hangisinin var oldugunuda bilmiyoruz.heerhangi bir 
+trafigi herhangi bir yere fowardlayabiliriz.kural belirledi.ping_sweep hangi makineler ayakta onu toplar.
+relying? 0.0.0.0=hepsi local demek. dns snoffing arastir.port dinleme ile trafik degisiklikler haledrilir. netstat -an ile 
+kontrol saglanir.yonlendirme ile sql'e gelen(dc'den) kaliye gelicek.
+-------------------------------------------------------------------------------------------------------------------------------
+mitm sadece bulunduguuz subnete yapabilir.z.
+kendimizi sql olarak arp snoff yapicaz paketi yakalayip parolayi alicaz.
+mitm adimlari
+ip forward = 1'e Ãcekeriz acik olmasi icin ip forward vp_4
+nat 	   = 1433 gelen herseyi kendi Ãuzerimizde tutucaz iptables ayarlanir.
+spoof	   = metasploitlerde capture baslatmamiz lazim tds gibi davraniyor.
+arp	   = sql'le giden mac'i kalimizin mac'i ile degistirmcez.
+sayfa yenilenince islem tamamlanmis olucaktir.
+-------------------------------------------------------------------------------------------------------------------------------
+Ä±

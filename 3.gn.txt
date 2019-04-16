@@ -1,0 +1,9 @@
+Sanal kullanicilar ve fiziksel kullanicilir. windowsda arastir                                                             |
+----------------------------------------------------------------------------------------------------------------------------
+nmap scriptleri calistirilabilir.veya otomotize araslar kullanilir.
+Nessus -  Nexpose - Openvas = kurulup Ãogrenilecek.ÃUcretsiz kurulumlari ile sanal makineleri onlar ile tarat rapor cikar
+Active Directory kur-yonet-sunucu bagla-zafiyet olustur -tara.
+Zenmap ile script kullanma (nmap iile de ogren)| script ile zafiyeti tespit edip analiz edebilirsiniz |
+-p ile portu verip script yonlendirebiliriz. isteigimiz porta,oncesinde aramamizdan zaten portlari ve version bilgilerini 
+bulmustuk.
+| prfile edit selectin script smb-0867 kodu geliyor kodu kopyala nmap komutunun oraya yapistir. |

